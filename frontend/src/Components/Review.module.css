@@ -1,0 +1,55 @@
+.ratingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ratingAuthor p {
+  margin-top: 12px;
+}
+.ratingText {
+  max-width: 76%;
+}
+.ratingStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ratingFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.verifiedUser {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.verifiedUser svg {
+  color: #00cc21;
+  font-size: 24px;
+}
+.verifiedUser p {
+  font-size: 14px;
+  color: var(--black);
+}
+.ratingVote {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.votes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.votes button {
+  background-color: transparent;
+  border: none;
+}
+.votes button:hover svg {
+  color: var(--black);
+}
+.votes svg {
+  font-size: 24px;
+  color: var(--gray);
+}

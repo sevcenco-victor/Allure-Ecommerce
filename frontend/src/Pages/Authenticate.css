@@ -1,0 +1,68 @@
+.authenticate-container {
+  background-color: #f6f6f6;
+  margin-bottom: -130px;
+}
+
+.authenticate-page {
+  background-image: url('https://i.ibb.co/fpz18ZV/authenticate-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: calc(70vw);
+  background-position: right 10px bottom;
+  background-attachment: fixed;
+}
+.authenticate-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  width: 30%;
+  padding: 140px 0;
+}
+.authenticate-wrapper h2 {
+  font-family: 'Grafita', 'inter';
+  font-size: clamp(1.5rem, 0.875rem + 3.125vw, 4rem);
+}
+.authenticate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.authenticate-form .form-input,
+.authenticate-form button {
+  min-width: 100%;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.btn-link {
+  border: none;
+  background-color: transparent;
+  transition: var(--transition-time);
+  width: fit-content;
+}
+.btn-link p {
+  color: var(--black);
+  font-weight: 600;
+}
+.btn-link hr {
+  border: 1px solid var(--black);
+}
+.btn-link:hover {
+  transform: scale(105%);
+}
+.form-trusts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.form-trusts input {
+  border-radius: 0;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.authenticate-switch {
+  display: flex;
+  gap: 12px;
+}

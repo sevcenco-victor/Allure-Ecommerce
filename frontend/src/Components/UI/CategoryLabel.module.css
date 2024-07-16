@@ -1,0 +1,8 @@
+.label {
+  color: grey;
+}
+
+.label.selected {
+  color: black;
+  font-weight: 600;
+}

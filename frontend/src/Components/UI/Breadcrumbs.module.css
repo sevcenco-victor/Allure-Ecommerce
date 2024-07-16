@@ -1,0 +1,21 @@
+.breadcrumbs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.item a {
+  color: var(--gray);
+}
+.item a:hover {
+  color: var(--black);
+}
+
+.currItem {
+  font-weight: 600;
+  color: var(--black);
+}

@@ -1,0 +1,59 @@
+.footer {
+  background-color: var(--black);
+  margin-top: 120px;
+  color: white;
+}
+.footerItems {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footerListItem ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footerListItem a {
+  color: white;
+}
+.footerListSubscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#footerActions {
+  max-width: 38%;
+}
+.footerEmailForm {
+  display: flex;
+  gap: 24px;
+}
+.footerInput {
+  border: 1px solid white;
+  color: white;
+  width: 100%;
+}
+.subscribeInfo {
+  color: var(--light-gray);
+}
+.footerSocials {
+  display: flex;
+  gap: 24px;
+}
+.footerLogo {
+  height: auto;
+  width: 100%;
+}
+.footerDevider {
+  margin-top: 46px;
+}
+.footerCopyright {
+  color: var(--gray);
+  padding: 24px;
+  text-align: center;
+}

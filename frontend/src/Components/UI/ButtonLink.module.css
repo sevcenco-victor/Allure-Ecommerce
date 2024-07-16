@@ -1,0 +1,39 @@
+.buttonLink {
+  display: flex;
+  gap: 0.75rem;
+  background-color: transparent;
+  align-items: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+}
+.buttonLink hr {
+  border: 1px solid;
+}
+.buttonLink svg {
+  transition: var(--transition-time);
+}
+.buttonLink .buttonContent {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.buttonLink:hover {
+  transform: scale(105%);
+}
+.buttonLink:hover svg {
+  transform: rotate(45deg);
+}
+.white .buttonContent {
+  color: white;
+}
+.white svg {
+  color: white;
+}
+.black .buttonContent {
+  color: black;
+}
+.black svg {
+  color: black;
+}
