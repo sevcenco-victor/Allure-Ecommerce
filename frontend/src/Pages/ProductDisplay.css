@@ -1,3 +1,8 @@
+.product-content {
+  height: min-content;
+  position: sticky;
+  top: calc(var(--navBar-maxHeight) + 24px);
+}
 .product-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -68,12 +73,27 @@ details > summary {
   list-style: none;
 }
 
-.whats-my-size a {
+.whats-my-size summary p {
   cursor: pointer;
   text-decoration: underline;
   font-weight: 600;
+  font-size: 20px;
+  color: var(--black);
 }
-
+.whats-size {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 12px;
+}
+.whats-size p {
+  color: var(--black);
+}
+.whats-size-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .product-cta {
   margin-top: 46px;
   display: flex;
@@ -94,19 +114,44 @@ details > summary {
 .product-reviews {
   display: grid;
   grid-template-columns: 0.56fr 1fr;
+  gap: 120px;
+}
+.rating-score-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.rating-score-item p {
+  color: var(--black);
+  white-space: nowrap;
 }
 .ratings-header {
   display: flex;
   justify-content: space-between;
+}
+.ratings-item {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 .rating-score-header > div {
   margin-top: 24px;
 }
 .rating-score-numbers {
   margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.filter-type {
-  margin-top: 46px;
+.rating-conditions {
+  display: flex;
+  gap: 24px;
+}
+.verified-buyer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 .rating-list {
   margin-top: 64px;

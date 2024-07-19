@@ -1,18 +1,18 @@
-const ColorRadio = ({ color, isChecked = true, onChange }) => {
+const ColorRadio = ({ color, isChecked, onChange, defaultChecked = false }) => {
   const customStyle = {
     appearance: 'none',
-    width: '24px',
-    height: '24px',
+    width: '16px',
+    height: '16px',
     borderRadius: '50%',
     cursor: 'pointer',
     backgroundColor: color,
     border: isChecked
-      ? `2px double ${
+      ? `1.8px double ${
           color.toLowerCase() == 'black' || color === '#000000'
             ? 'var(--gray)'
             : 'black'
         }`
-      : `2px solid var(--light-gray)`,
+      : `1.8px solid var(--light-gray)`,
   };
   return (
     <input

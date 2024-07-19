@@ -1,0 +1,30 @@
+.cartItem {
+  display: flex;
+  gap: 24px;
+  padding: 46px 0 46px 0;
+}
+.itemImg {
+  width: 18%;
+  object-fit: cover;
+  object-position: top;
+}
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.itemFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.itemDetails p {
+  color: var(--black);
+  vertical-align: middle;
+}

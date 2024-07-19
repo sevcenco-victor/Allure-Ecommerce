@@ -24,7 +24,7 @@ const products = [
   {
     id: 2,
     category: 'Woman',
-    title: 'Silk Habotai Backless Maxi DressMaxi DressMaxi Dress',
+    title: 'Silk Habotai Backless Maxi Dress',
     images: [
       'https://i.ibb.co/2gdDQgk/img6.jpg',
       'https://i.ibb.co/hZTksNr/img2.jpg',
@@ -178,6 +178,284 @@ const products = [
     colors: ['Blue', 'White', 'Black'],
     sizes: ['S', 'M', 'L', 'XL'],
     price: 120,
+  },
+  {
+    id: 9,
+    title: 'Casual Shirt',
+    images: [
+      'https://i.ibb.co/8YyFsd5/image.jpg',
+      'https://www.badmaash.com/cdn/shop/files/4M6A1596.jpg?v=1686829359',
+    ],
+    category: 'Shirt',
+    rating: 4.5,
+    reviewNum: 120,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Blue', 'White', 'Black'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    price: 120,
+  },
+  {
+    id: 10,
+    title: 'Casual Shirt',
+    images: [
+      'https://i.ibb.co/8YyFsd5/image.jpg',
+      'https://www.badmaash.com/cdn/shop/files/4M6A1596.jpg?v=1686829359',
+    ],
+    category: 'Shirt',
+    rating: 4.5,
+    reviewNum: 120,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Blue', 'White', 'Black'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    price: 120,
+  },
+  {
+    id: 11,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 12,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 13,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 14,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 15,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 16,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 17,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 18,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
+  },
+  {
+    id: 19,
+    category: 'Woman',
+    title: 'Silk Habotai Backless Maxi Dress',
+    images: [
+      'https://i.ibb.co/2gdDQgk/img6.jpg',
+      'https://i.ibb.co/hZTksNr/img2.jpg',
+      'https://i.ibb.co/y5mwgmv/img4.jpg',
+      'https://i.ibb.co/Q6wVSjY/img5.jpg',
+      'https://i.ibb.co/2Mb0Qvn/img3.jpg',
+      'https://i.ibb.co/p1nzRBQ/img1.jpg',
+    ],
+    rating: 4.5,
+    reviewNum: 80,
+    details: {
+      description:
+        'A customer favorite returns in a warm-weather ready fabric. This charming maxi dress is cut from a twill woven from silky viscose rayon and softly structured hemp, the better to emphasize its flowing cape-like construction.',
+      trapezFit:
+        'Cut for a flowing, A-line fit. No waist definition. Crew neck with zip and hook-and-eye closure at back.',
+      fabricAndCare:
+        '66% viscose rayon, 34% hemp. Machine wash, lay flat to dry.',
+    },
+    colors: ['Red', 'Green', 'Yellow'],
+    sizes: ['XXS', 'XS', 'S', 'M', 'L'],
+    price: 99,
   },
 ];
 export default products;

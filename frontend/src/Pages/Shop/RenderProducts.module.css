@@ -1,0 +1,19 @@
+.rowLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 505px;
+  max-height: 650px;
+  gap: 10px;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 505px);
+  gap: 10px;
+}
+
+.gridEl3 {
+  grid-column: span 2;
+  grid-row: span 2;
+}

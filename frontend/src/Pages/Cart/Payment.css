@@ -1,0 +1,33 @@
+.payment-wrapper {
+  padding-top: 48px;
+}
+.select-payment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.payment-types {
+  display: flex;
+  gap: 14px;
+}
+.payment-types input {
+  display: none;
+}
+.payment-icon {
+  font-size: 46px;
+  cursor: pointer;
+  opacity: 30%;
+}
+.selected {
+  opacity: 100%;
+}
+
+.credit-card-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.credit-card-form input {
+  width: 100%;
+}

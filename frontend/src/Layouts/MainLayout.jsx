@@ -8,7 +8,8 @@ const MainLayout = () => {
   const isContentUnderNavBar =
     location.pathname !== '/' &&
     location.pathname !== '/login' &&
-    location.pathname !== '/signup';
+    location.pathname !== '/signup' &&
+    location.pathname !== '/cart/confirmation';
 
   return (
     <>

@@ -132,7 +132,7 @@ const Filter = ({
       <div className="filter-actions">
         <Button text="Clear All" onClick={handleFilterClear} />
         <Button
-          type="primary"
+          category="primary"
           text="Apply"
           onClick={() => {
             filterApply();

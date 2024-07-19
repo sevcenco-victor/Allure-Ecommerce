@@ -3,14 +3,15 @@ import './Authenticate.css';
 import LogIn from '../Components/Authenticate/LogIn';
 import CreateAccount from '../Components/Authenticate/CreateAccount';
 import { useNavigate } from 'react-router-dom';
+import useData from 'rsuite/esm/InputPicker/hooks/useData';
 
 const Authenticate = ({ isLogin }) => {
   const [userData, setUserData] = useState({});
   const navigate = useNavigate();
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    navigate('/home');
+  const handleFormSubmit = (formData) => {
+    setUserData(formData);
+    console.log('Recieved Data', formData);
   };
   return (
     <div className="authenticate-container">

@@ -26,6 +26,9 @@
   flex-direction: column;
   gap: 12px;
 }
+.footerListSubscribe p {
+  color: white;
+}
 #footerActions {
   max-width: 38%;
 }

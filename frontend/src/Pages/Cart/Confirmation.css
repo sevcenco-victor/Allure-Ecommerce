@@ -1,0 +1,18 @@
+.confirmation-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.confirmation-data {
+  margin-top: calc(var(--navBar-maxHeight) + 24px);
+}
+.confirmation-recommendations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: min-content;
+}
+.confirmation-recommendations button {
+  align-self: end;
+}
+.confirmation-bg {
+  height: 100dvh;
+}

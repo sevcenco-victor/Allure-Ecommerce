@@ -1,28 +1,26 @@
 import { useEffect, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import { ReactComponent as FilterIcon } from '../Assets/icons/filter.svg';
-import Breadcrumbs from '../Components/UI/Breadcrumbs';
-import products from '../data/products';
-import Product from '../Components/Product/Product';
-import Button from '../Components/UI/Button';
-import Dropdown from '../Components/UI/Dropdown';
-import Filter from '../Components/Filter';
+import { ReactComponent as FilterIcon } from '../../Assets/icons/filter.svg';
+import Breadcrumbs from '../../Components/UI/Breadcrumbs';
+import products from '../../data/products';
+import Product from '../../Components/Product/Product';
+import Button from '../../Components/UI/Button';
+import Dropdown from '../../Components/UI/Dropdown';
+import Filter from '../../Components/Filter';
 import './Shop.css';
-import {
-  useFetcher,
-  useLocation,
-  useNavigate,
-  useSearchParams,
-} from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import queryString from 'query-string';
+import RenderProducts from './RenderProducts';
+
 const Shop = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([...products]);
   const [originalProducts] = useState([...products]);
-  const [appliedFilter, setAppliedFilter] = useState([...products]);
   const [filterIsVisible, setFilterIsVisible] = useState(false);
   const { pathname } = useLocation();
   const [currentCategory, setCurrentCategory] = useState('');
+
+  const sortByOptions = ['Title', 'Lowest Price', 'Highest Price'];
 
   const [searchParams, setSearchParams] = useSearchParams();
   const { search } = useLocation();
@@ -31,14 +29,15 @@ const Shop = () => {
 
   const handleCategoryChange = (category) => setCurrentCategory(category);
 
-  const handleSortChange = (option) => {
+  const handleSortChange = (optionIndex) => {
+    console.log('recieved optionIndex:', optionIndex);
     const sortedProducts = [...filteredProducts];
 
-    if (option === 'title') {
+    if (optionIndex == 0) {
       sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (option === 'price-low') {
+    } else if (optionIndex == 1) {
       sortedProducts.sort((a, b) => a.price - b.price);
-    } else if (option === 'price-high') {
+    } else if (optionIndex == 2) {
       sortedProducts.sort((a, b) => b.price - a.price);
     }
 
@@ -51,7 +50,6 @@ const Shop = () => {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    console.log(searchTerm);
   };
 
   const handleFilterApply = () => {
@@ -112,45 +110,6 @@ const Shop = () => {
     applyFilters(currentCategory, searchTerm);
   }, [searchTerm]);
 
-  // useEffect(() => {
-  //   let currProducts = [...products];
-  //   if (currentCategory) {
-  //     currProducts = currProducts.filter((product) =>
-  //       product.category.toLowerCase().includes(currentCategory.toLowerCase())
-  //     );
-  //   }
-  //   setAppliedFilter(currProducts);
-  // }, [currentCategory]);
-
-  // useEffect(() => {
-  //   let currProducts = [...appliedFilter];
-
-  //   if (searchTerm.length !== 0) {
-  //     currProducts = currProducts.filter((product) =>
-  //       product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  //     );
-  //   }
-  //   setFilteredProducts(currProducts);
-  // }, [searchTerm]);
-
-  // useEffect(() => {
-  //   const categoryWithParams = pathname.split('/shop/')[1] || '';
-  //   const [category] = categoryWithParams.split('&');
-
-  //   let currProducts = [...products];
-
-  //   if (category) {
-  //     currProducts = currProducts.filter((product) =>
-  //       product.category
-  //         .toLocaleLowerCase()
-  //         .includes(category.toLocaleLowerCase())
-  //     );
-  //   }
-  //   setFilteredProducts(currProducts);
-  //   console.log('shop page load', currProducts);
-  //   console.log('shop page load', filteredProducts);
-  // }, []);
-
   return (
     <div className="container">
       <Breadcrumbs />
@@ -187,25 +146,16 @@ const Shop = () => {
             )}
           </div>
         </div>
-        <Dropdown>
-          <button onClick={() => handleSortChange('title')}>Title</button>
-          <button onClick={() => handleSortChange('price-low')}>
-            Lowest Price
-          </button>
-          <button onClick={() => handleSortChange('price-high')}>
-            Highest Price
-          </button>
-        </Dropdown>
+        <Dropdown
+          name="sort-by"
+          options={sortByOptions}
+          onChange={handleSortChange}
+          defaultText="Sort By"
+        />
       </div>
       <div className="shop-products">
-        <div className="shop-products row-layout">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
-              <Product key={product.id} {...product} />
-            ))
-          ) : (
-            <h4>No products found by your search criteria</h4>
-          )}
+        <div className="shop-products">
+          <RenderProducts products={filteredProducts} />
         </div>
       </div>
     </div>

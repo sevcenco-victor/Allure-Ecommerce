@@ -1,26 +1,29 @@
-import Rating from './UI/Rating';
+import Rating from '../UI/Rating';
 import styles from './Review.module.css';
 import { MdVerifiedUser } from 'react-icons/md';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { AiOutlineLike } from 'react-icons/ai';
 
-const Review = ({ ratingScore, title, author, date, text, isVerified }) => {
+const Review = ({
+  ratingScore,
+  title,
+  author,
+  date,
+  text,
+  helpfulScore,
+  isVerified = false,
+}) => {
   return (
     <div className={styles.ratingWrapper}>
       <div className={styles.ratingStats}>
         <Rating ratingScore={ratingScore} />
-        <p>1 week ago</p>
+        <p>{date}</p>
       </div>
       <div className={styles.ratingAuthor}>
-        <h4>Beautiful and Elegant!</h4>
-        <p>Emily R</p>
+        <h4>{title}</h4>
+        <p>{author}</p>
       </div>
-      <p className={styles.ratingText}>
-        The AURELIA VISCOSE-HEMP MAXI DRESS is beautiful and elegant. The
-        material is breathable and comfortable for all-day wear. My only wish is
-        that it came in more colors. Other than that, it's a fantastic addition
-        to my wardrobe.
-      </p>
+      <p className={styles.ratingText}>{text}</p>
 
       <div className={styles.ratingFooter}>
         {isVerified ? (

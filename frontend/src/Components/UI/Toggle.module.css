@@ -1,0 +1,26 @@
+.toggle {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  border-radius: 24px;
+  background-color: var(--light-gray);
+  border: none;
+  transition: var(--transition-time);
+}
+.toggleCheck {
+  background-color: var(--black);
+}
+.togglePoint {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 12px;
+  background-color: var(--gray);
+  transition: var(--transition-time);
+}
+.togglePointCheck {
+  transform: translateX(150%);
+  background-color: white;
+}

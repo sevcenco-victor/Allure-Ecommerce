@@ -5,10 +5,13 @@ import './ProductDisplay.css';
 import Button from '../Components/UI/Button';
 import Rating from '../Components/UI/Rating';
 import { useEffect, useState } from 'react';
-import Review from '../Components/Review';
+import Review from '../Components/Product/Review';
 import ButtonLink from '../Components/UI/ButtonLink';
 import Product from '../Components/Product/Product';
 import ColorRadio from '../Components/UI/ColorRadio';
+import Toggle from '../Components/UI/Toggle';
+import Dropdown from '../Components/UI/Dropdown';
+import ProgressBar from '../Components/UI/ProgressBar';
 
 const getProductById = (id) =>
   products.filter((product) => product.id === Number(id));
@@ -23,6 +26,9 @@ const ProductDisplay = () => {
   const columnTwoImages = images.slice(columnOneImages.length, images.length);
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
+  const [selectedQty, setSelectedQty] = useState(1);
+  const [isBuyerVerified, setIsBuyerVerified] = useState(false);
+  const handleIsBuyerVerified = (check) => setIsBuyerVerified(check);
 
   useEffect(() => {
     setSelectedColor(colors[0]);
@@ -87,20 +93,47 @@ const ProductDisplay = () => {
               </div>
               <details className="whats-my-size">
                 <summary>
-                  <a>What's my size?</a>
+                  <p style={{ textDecoration: 'underline' }}>What's my size?</p>
                 </summary>
-                <div>measure data</div>
+                <div className="whats-size">
+                  <p>
+                    Before you buy, it's important to select the right size for
+                    a comfortable and proper fit. Check our size guide to make
+                    sure you choose correctly:
+                  </p>
+                  <ul className="whats-size-list">
+                    <li>
+                      <strong>Personal Measurements:</strong> Start by taking
+                      your bust, waist, and hip measurements. Use a flexible
+                      tape measure for the most accurate results.
+                    </li>
+                    <li>
+                      <strong>Size Chart:</strong> Check our size chart to find
+                      the correct size based on your measurements. Choose the
+                      size that best matches your measurements.
+                    </li>
+                    <li>
+                      <strong>Selection Tips:</strong> If your measurements fall
+                      between two sizes, we recommend choosing the larger size
+                      for a more comfortable fit.
+                    </li>
+                  </ul>
+                  <p>
+                    For more details and personalized advice, feel free to
+                    contact us. We want to ensure every purchase fits perfectly!
+                  </p>
+                </div>
               </details>
             </div>
             <div className="product-cta">
-              <select id="qty">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
+              <Dropdown
+                defaultText={selectedQty}
+                optionNames={'qty'}
+                options={[1, 2, 3, 4, 5, 6]}
+                isCTA={true}
+                onChange={(index) => setSelectedQty(index + 1)}
+              />
+
               <Button category="primary" text="Add to Bag" />
             </div>
             <section className="product-info">
@@ -126,32 +159,70 @@ const ProductDisplay = () => {
                 <h3>Rating & Rewiews</h3>
                 <div className="product-ratings d-flex-row">
                   {<Rating ratingScore={rating} />}
-                  <a href="#reviews">{`[ ${reviewNum} Reviews ]`}</a>
+                  <a>{`[ ${reviewNum} Reviews ]`}</a>
                 </div>
               </div>
-              <div className="rating-score-numbers">zz</div>
+              <div className="rating-score-numbers">
+                <div className="rating-score-item">
+                  <p>5 Stars</p>
+                  <ProgressBar value={65} />
+                  <p>82%</p>
+                </div>
+                <div className="rating-score-item">
+                  <p>4 Stars</p>
+                  <ProgressBar value={22} />
+                  <p>82%</p>
+                </div>
+                <div className="rating-score-item">
+                  <p>3 Stars</p>
+                  <ProgressBar value={8} />
+                  <p>82%</p>
+                </div>
+                <div className="rating-score-item">
+                  <p>2 Stars</p>
+                  <ProgressBar value={2} />
+                  <p>82%</p>
+                </div>
+                <div className="rating-score-item">
+                  <p>1 Stars</p>
+                  <ProgressBar value={12} />
+                  <p>82%</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="ratings-wrapper">
             <div className="ratings-header">
-              <div className="ratings-filter">
+              <div className="ratings-item">
                 <h3>Filter Reviews by</h3>
-                <div className="filter-type">
-                  <details>
-                    <summary>Stars</summary>
-                  </details>
+                <div className="rating-conditions">
+                  <Dropdown
+                    options={['1star', '2stars', '3stars', '4stars', '5stars']}
+                    defaultText="Stars"
+                    optionNames="rating"
+                    onChange={() => {}}
+                  />
+                  <div className="filter-type verified-buyer">
+                    <p>Verified Buyer</p>
+                    <Toggle
+                      isCheck={isBuyerVerified}
+                      handleIsCheck={handleIsBuyerVerified}
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="ratings-sort">
-                <h3>Sort By</h3>
-                <div className="filter-type">
-                  <details>
-                    <summary>Sort By</summary>
-                    <button>Most Helpful</button>
-                    <button>Newest</button>
-                    <button>Oldest</button>
-                  </details>
-                </div>
+              <div className="ratings-item">
+                <h3 style={{ textAlign: 'right' }}>Sort By</h3>
+                <Dropdown
+                  options={['Most Helpful', 'Newest', 'Oldest']}
+                  optionNames={'sortRating'}
+                  defaultText="Most Helpful"
+                  onChange={() => {}}
+                >
+                  <button>Most Helpful</button>
+                  <button>Newest</button>
+                  <button>Oldest</button>
+                </Dropdown>
               </div>
             </div>
             <div className="rating-list">
@@ -165,17 +236,16 @@ const ProductDisplay = () => {
             <ButtonLink text="View More" className="rating-list-viewMore" />
           </div>
         </section>
+
         <section className="most-wanted">
-          <div className="container">
-            <div className="most-wanted-header">
-              <h2>Complete the look</h2>
-              <ButtonLink text="Discover Full Collection" link="shop" />
-            </div>
-            <div className="most-wanted-products row-layout">
-              {products.slice(0, 4).map((product) => (
-                <Product key={product.id} {...product} />
-              ))}
-            </div>
+          <div className="most-wanted-header">
+            <h2>Complete the look</h2>
+            <ButtonLink text="Discover Full Collection" link="/shop" />
+          </div>
+          <div className="most-wanted-products row-layout">
+            {products.slice(0, 4).map((product) => (
+              <Product key={product.id} {...product} />
+            ))}
           </div>
         </section>
       </div>

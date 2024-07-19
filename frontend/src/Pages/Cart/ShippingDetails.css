@@ -1,0 +1,69 @@
+.shipping-page {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.shipping-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.shipping-types label {
+  padding: 12px;
+  border: 1px solid var(--black);
+  opacity: 30%;
+}
+.shipping-types label input {
+  display: none;
+}
+.shipping-types .selectedType {
+  opacity: 100%;
+}
+.shipping-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.shipping-card-icon {
+  font-size: 36px;
+}
+.shipping-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.shipping-data {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.shipping-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.shipping-wrapper label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.shipping-wrapper .address {
+  display: flex;
+  gap: 24px;
+}
+
+.temp-address-form {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.store-address-dropdown {
+  width: 60%;
+}
+.shipping-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
