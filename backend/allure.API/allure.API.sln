@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allure.API", "allure.API\allure.API.csproj", "{5EFD94F8-CD2D-4F42-BCD6-8AA67D6268B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allure.Domain", "allure.Domain\allure.Domain.csproj", "{33552026-C30B-4443-8E32-C0AB4CEAEA8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allure.Infrastructure", "allure.Infrastructure\allure.Infrastructure.csproj", "{8836D6B5-CC89-4D24-8FAA-2B8FBA066BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allure.Application", "allure.Application\allure.Application.csproj", "{92FB19DD-998E-402E-99B4-55824D84741D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EFD94F8-CD2D-4F42-BCD6-8AA67D6268B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EFD94F8-CD2D-4F42-BCD6-8AA67D6268B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EFD94F8-CD2D-4F42-BCD6-8AA67D6268B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EFD94F8-CD2D-4F42-BCD6-8AA67D6268B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33552026-C30B-4443-8E32-C0AB4CEAEA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33552026-C30B-4443-8E32-C0AB4CEAEA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33552026-C30B-4443-8E32-C0AB4CEAEA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33552026-C30B-4443-8E32-C0AB4CEAEA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8836D6B5-CC89-4D24-8FAA-2B8FBA066BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8836D6B5-CC89-4D24-8FAA-2B8FBA066BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8836D6B5-CC89-4D24-8FAA-2B8FBA066BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8836D6B5-CC89-4D24-8FAA-2B8FBA066BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FB19DD-998E-402E-99B4-55824D84741D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FB19DD-998E-402E-99B4-55824D84741D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FB19DD-998E-402E-99B4-55824D84741D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FB19DD-998E-402E-99B4-55824D84741D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
