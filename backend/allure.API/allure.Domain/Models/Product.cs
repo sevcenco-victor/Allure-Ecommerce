@@ -1,6 +1,4 @@
-﻿using CSharpFunctionalExtensions;
-
-namespace allure.Domain.Models;
+﻿namespace allure.Domain.Models;
 
 public class Product
 {
