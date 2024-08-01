@@ -1,12 +1,15 @@
-﻿namespace allure.Domain.Models;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace allure.Domain.Models;
 
 public class DebitCard
 {
-    public Guid Id { get; set; }
-    public string Number { get; set; } = string.Empty;
-    public DateTime EndDate { get; set; }
-    public int Cvc { get; set; } = 000;
-    public string HolderName { get; set; } = string.Empty;
-    public string? Email { get; set; } = string.Empty;
-
+    public Guid Id { get; private set; }
+    public string Number { get; private set; } = string.Empty;
+    public DateTime EndDate { get; private set; }
+    public string Cvc { get; private set; } = string.Empty;
+    public string HolderName { get; private set; } = string.Empty;
+    public string? Email { get; private set; } = string.Empty;
+    public Guid UserId { get; private set; }
+    public User? User { get; private set; }
 }
