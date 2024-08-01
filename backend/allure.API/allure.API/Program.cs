@@ -1,3 +1,4 @@
+using allure.Application.Services;
 using allure.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<AllureDbContext>();
+// dependencies
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddDbContext<AllureDbContext>();
 
 var app = builder.Build();
 
